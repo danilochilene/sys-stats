@@ -1,0 +1,16 @@
+language: go
+
+go: 
+  - tip
+
+install:
+  - go get github.com/BurntSushi/toml
+  - go get github.com/shirou/gopsutil/cpu
+  - go get github.com/shirou/gopsutil/mem
+  - go get github.com/shirou/gopsutil/disk
+  - go get github.com/stretchr/testify/assert
+  - go get github.com/bicofino/sys-stats/stats
+  - go get github.com/bicofino/sys-stats/config
+
+script: 
+  - go test -v ./...
